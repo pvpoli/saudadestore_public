@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <link rel="stylesheet" href="{% static 'saudadesemfim/style.css' %}">
+
+    <meta charset="utf-8">
+
+    <title>{{webTitle}}</title>
+    <body>
+        <div class="header-container">
+            <h1>{{webTitle}}</h1>
+            <div id="menuButton" class="container" onclick="menuOpen(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>    
+                <div class="bar3"></div>
+                <div id="menuDropdown" class="dropdown-content">
+                    <a href="#">Quem somos</a>
+                    <a href="#">Galeria</a>
+                    <a href="#">Alforreca</a>
+                    <a href="#">Como chegar</a>
+                    <a href="#">Fale connosco</a>
+                    </div>
+                </div>
+             </div> 
+        </div>
+        <hr>
+        <div class="slideshow-container">
+            {% for image in mainImage %}
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img class="mainImage" src={{ image.photos_item.url }}>
+                </div>
+            {% endfor %}
+          
+            <!-- Next and previous buttons 
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            -->
+        </div>
+          
+        <br>
+          
+          
+          <!-- The dots/circles
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        -->
+        <!--
+        <div class="mainFrame">
+            <img class="mainImage" src={{ mainImage }}
+        </div>
+        -->
+
+        <footer id="footer-wrapper">
+            <div class="siteMap">
+                <ul>
+                    <li class="siteMap-column">
+                        <ul>
+                            <a id="linktoMaps" href="https://goo.gl/maps/tTVa5vzhDEB8AoV89" target="_blank">
+                                <span class="textToMaps">Venha tomar um café connosco!</span>
+                            </a>
+                            <li id="physicalContact">Rua do Vigario, 16</li>
+                            <li id="physicalContact">1100-615</li>
+                            <li id="physicalContact">Lisboa</li>
+                            <li id="physicalContact">+351 218 873 831</li>
+                            <a id="physicalContact" href="mailto:saudadesstore@gmail.com">saudadesstore@gmail.com</a>
+                            <div class="socialMedia-container">
+                                <ul class="socialMedia">
+                                    <a class="instagram-icon" title="Instagram" href="https://www.instagram.com/saudade.sem.fim/" target="_blank">
+                                        <img class="socialMedia-icon" src="{% static 'saudadesemfim/instagram.webp' %}">
+                                    </a>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script src="{% static 'saudadesemfim/slideshow.js' %}"></script>
+        <script src="{% static 'saudadesemfim/menuOpen.js' %}"></script>
+    </body>
+</html>

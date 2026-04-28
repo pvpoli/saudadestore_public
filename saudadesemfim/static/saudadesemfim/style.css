@@ -1,0 +1,196 @@
+body{
+  font-family: Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+h1{
+  color: #18ACEC;
+  text-align:center;
+}
+
+.header-container{
+    overflow: auto;
+    white-space: nowrap;
+    overflow-x: visible;
+}
+
+/* List Menu (Hidden on small screen) */
+.leftMenu {
+  float: left;
+  width:25%;
+}
+
+.listContent{
+  position: fixed;
+}
+
+/* Links inside the dropdown */
+.listContent a {
+  color: #18ACEC;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+}
+
+/* Change color of dropdown links on hover */
+.listContent a:hover {
+  font-size: 2rem;
+  color: #0ba0e0;
+}
+
+#footer-wrapper{
+  display: block;
+  position:fixed;
+  bottom: 2%;
+  height: auto;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 12px;
+}
+
+#footer-below{
+  display: none;
+  height: auto;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+.siteMap-column{
+  float: left;
+  text-align: center;
+}
+
+.socialMedia-icon{
+  margin-top: 0.5em;
+  height: 1.5em;
+  width: auto;
+}
+
+.socialMedia-icon-below{
+  margin-top: 0;
+  height: 1em;
+  width: auto;
+}
+
+.textToMaps{
+  text-decoration: none;
+  color: #18ACEC;
+}
+
+#linktoMaps{
+text-decoration: none;
+color: #18ACEC;
+}
+
+#physicalContact:link{
+  text-decoration: none;
+  color: #18ACEC;
+}
+
+
+.container {
+  cursor: pointer;
+  vertical-align:auto;
+  display: none;
+  width: 100%;
+}
+
+.bar1, .bar2 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.menuDropdownWrapper{
+  display: grid;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  align-self: center;
+  display: none;
+  min-width: 160px;
+  margin-top: 4vh;
+  text-align: center;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #18ACEC;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.onPage{
+  font-size: 2rem !important;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+li, ul, a {
+  list-style-type: none;
+}
+
+  @media (max-width: 1000px) {
+    .container {
+      display: inline-block;
+    }
+    .leftMenu{
+      display: none;
+    }
+    .dropdown-content a {
+      padding: 6px 6px;
+      font-size: 1.2rem;
+    }
+    .onPage{
+      font-size: 1.5rem !important;
+    }
+    #footer-below{
+      display: block;
+      padding-top: 5%;
+    }
+  }
+  @media (max-width: 400px) {
+    .container {
+      display: inline-block;
+    }
+    .leftMenu{
+      display: none;
+    }
+    .dropdown-content a {
+      padding: 6px 6px;
+      font-size: 1.2rem;
+    }
+    .onPage{
+      font-size: 1.5rem !important;
+    }
+    #footer-below{
+      display: block;
+      padding-top: 5%;
+    }
+  }

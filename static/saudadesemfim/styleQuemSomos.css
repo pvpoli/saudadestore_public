@@ -1,0 +1,39 @@
+.textAndImageContainer{
+  padding-left: 25%;
+  max-width: 70%;
+  white-space: initial;
+  overflow-wrap: break-word;
+  line-height: 2em;
+}
+
+.ilustra {
+  float: right;
+  margin-left: 20px;
+  width: 20%;
+  height: auto;
+}
+
+p {
+  text-align: justify;
+  color: #05658e;
+  font-size: 1.25em;
+}
+
+  @media (max-width: 1000px) {
+    .textAndImageContainer{
+      padding-left: 10%;
+      max-width: 90%;
+    }
+    .ilustra{
+      width: 40%;
+    }
+  }
+  @media (max-width: 400px) {
+    .textAndImageContainer{
+      padding-left: 2%;
+      max-width: 95%;
+    }
+    .ilustra{
+      width: 65%;
+    }
+  }

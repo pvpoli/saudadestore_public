@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <link rel="stylesheet" href="{% static 'saudadesemfim/styleAlforreca.css' %}">
+    <link rel="stylesheet" href="{% static 'saudadesemfim/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <title>Saudade - Alforreca</title>
+    </head>
+    <body>
+        <div>
+            <h1>ALFORRECA</h1>
+        </div>
+        <div class="header-container">
+            <div id="menuButton" class="container" onclick="menuOpen(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <div class="menuDropdownWrapper">
+                    <div id="menuDropdown" class="dropdown-content">
+                        <a href="../">Home</a>
+                        <a href="../galeria">Galeria</a>
+                        <a href="../quemsomos">Quem somos</a>
+                        <a href="#" class="onPage">Alforreca</a>
+                        <a href="../comochegar">Como chegar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="leftMenu">
+                <div id="menuList" class="listContent">
+                    <a href="../">Home</a>
+                    <a href="../galeria">Galeria</a>
+                    <a href="../quemsomos">Quem somos</a>
+                    <a href="#" class="onPage">Alforreca</a>
+                    <a href="../comochegar">Como chegar</a>
+                </div>
+                <div id="footer-wrapper">
+                    <a id="linktoMaps" href="https://goo.gl/maps/tTVa5vzhDEB8AoV89" target="_blank">
+                        <span class="textToMaps">Venha tomar um café connosco!</span>
+                    </a>
+                    <li id="physicalContact">Rua do Vigário, 16</li>
+                    <li id="physicalContact">1100-615</li>
+                    <li id="physicalContact">Lisboa</li>
+                    <li id="physicalContact">+351 218 873 831</li>
+                    <a id="physicalContact" href="mailto:saudadesstore@gmail.com">saudadesstore@gmail.com</a>
+                    <div class="socialMedia-container">
+                        <a class="instagram-icon" title="Instagram" href="https://www.instagram.com/saudade.sem.fim/" target="_blank">
+                            <img class="socialMedia-icon" src="{% static 'saudadesemfim/instagram.webp' %}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="textAndImageContainer">
+                <div>
+                    <a class="alforrecaLink" title="Alforreca" href="https://alforrecaeditora.blogspot.com/" taret="_blank">
+                        <img class="ilustra" src="{{ alforrecaTexto.photos_item.url }}" alt="Logo da Alforreca: uma agua viva estilizada">
+                    </a>
+                </div>
+                <p>
+                    {{ alforrecaTexto.text_alforreca|linebreaks }}
+                </p>
+            </div>
+            <div id="photos">
+                {% for image in images %}
+                    <div class="box">
+                        <img class="imagethumb" src={{ image.photos_item.url }}>
+                    </div>
+                {% endfor %}
+                </div>
+            <div id="footer-below">
+                <a id="linktoMaps" href="https://goo.gl/maps/tTVa5vzhDEB8AoV89" target="_blank">
+                    <span class="textToMaps">Venha tomar um café connosco!</span>
+                </a>
+                <li id="physicalContact">Rua do Vigário, 16</li>
+                <li id="physicalContact">1100-615</li>
+                <li id="physicalContact">Lisboa</li>
+                <li id="physicalContact">+351 218 873 831</li>
+                <a id="physicalContact" href="mailto:saudadesstore@gmail.com">saudadesstore@gmail.com</a>
+                <div class="socialMedia-container">
+                    <a class="instagram-icon" title="Instagram" href="https://www.instagram.com/saudade.sem.fim/" target="_blank">
+                        <img class="socialMedia-icon" src="{% static 'saudadesemfim/instagram.webp' %}">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'saudadesemfim/menuOpenRefront.js' %}"></script>
+    </body>
+</html>
